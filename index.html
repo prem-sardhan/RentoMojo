@@ -4,219 +4,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #container{
-            padding: 0px;
-            border: 1px solid red;
-            height: 1500px;
-            background-color: rgb(246,246,246);
-        }
-        #navbar{
-            width: 100%;
-            height: 50px;
-            margin: auto;
-            margin-top: 5px;
-            display: flex;
-            position: fixed;
-            
-            
-            
-            
-            
-        }
-        #navbar div{
-            /* width: 25%; */
-            height: 100%;
-           
-            margin: auto;
-
-        }
-        #navbar>div:nth-child(1){
-            width: 15%;
-            margin-left: 7%;
-        }
-       #navbar img{
-        width: 100%;
-        height: 80%;
-       }
-       #logo img{
-        width: 15%;
-        height: 50%;
-        margin-left: 35px;
-       }
-       #navbar div:nth-child(3){
-        width: 45%;
-        margin-left: 35px;
-        border-radius: 35px;
-       }
-       #searchbox input{
-        width: 100%;
-        height: 80%;
-        font-size: large;
-        background-color: rgb(227, 230, 236);
-        border-radius: 15px;
-        
-       }
-       #navbar div:nth-child(4){
-        width: 6%;
-        height: 80%;
-        margin-left: 10px;
-       
-       }
-       #cart1 img{
-        width: 70%;
-        height: 70%;
-       
-        
-        
-       }
-       #navbar div:nth-child(5){
-        width: 8%;
-        height: 100%;
-       }
-       #btn button{
-        padding: 7px;
-        border-radius: 5px;
-        background-color: #dc3226;
-        color: white;
-        border: none;
-        margin-left: 5px;
-        margin-top: 15px
-        
-       }
-       /* CRAUSER...................... */
-       #crauser{
-        width: 95%;
-        height: 500px;
-        margin: auto;
-        margin-bottom: 20px;
-        /* position: relative; */
-       
-        margin-top: 70px;
-       }
-       #crauser img{
-        width: 100%;
-        height: 100%;
-        
-       }
-      #crauser button{
-        position: absolute;
-        top: 40%;
-      }
-
-      /* section ......................... */
-      #section{
-        width: 90%;
-        height: 120px;
-        
-        display: flex;
-        margin-top: 15px;
-        margin-left: 10px;
-        
-        margin: auto;
-      }
-      #section div{
-        width: 16%;
-        height: 100%;
-        margin: auto;
-        border: 1px solid grey;
-        border-radius: 7px;
-       
-       
-        
-        
-       
-      }
-      #section div:hover{
-        cursor: pointer;
-        background-color: rgb(223, 213, 213);
-       
-      }
-      #section img{
-        width: 70%;
-        height: 70%;
-        margin-left: 25px;
-        margin-top: 10px;
-      }
-    
-      
-      h3{
-        text-align: center;
-        margin-top: 5px;
-        font-weight: normal;
-        font-size: 12px;
-        
-        
+    <link rel="stylesheet" href="index.css">
    
-        
-      }
-      #fur img{
-        width: 25%;
-        margin-left:70px;
-        margin-top: 10px;
-      }
-     
-      
-
-      #appliance img{
-        height: 10px;
-        width: 10%;
-        margin-left: 40px;
-      }
-      #appliance a{
-        text-decoration: none;
-        color: black;
-      }
-      
-/* 
-      #appliance h3{
-        margin-bottom: 20px; */
-      
-      #electronics img{
-        width: 40%;
-        height: 40%;
-        margin-left: 50px;
-        margin-top: 25px;
-        
-      }
-      /* #electronics h3{
-        margin-right: 10px;
-      } */
-      #appliance img{
-        width: 50%;
-        height: 50%;
-        margin-left: 50px;
-        margin-top: 20px;
-        justify-content: center;
-
-      }
-     
-      #fitness img{
-        width: 40%;
-        height: 40%;
-        margin-left: 50px;
-        margin-top: 20px;
-
-      }
-      #WFH img{
-        width: 35%;
-        height: 35%;
-        margin-top: 25px;
-        margin-left: 50px;
-      }
-
-       
-      
-       
-       
-       
-        
-        
     
         
-       
-    </style>
-</head>
+  </head>
 <body>
     <!-- 1st box........................................... -->
     <div id="container">  
@@ -249,21 +41,23 @@
                
             </div>
             <div id="btn">
-                <button>Login/Sign up</button>
+              <button> <a id="sign in" href="signup.html">Login/Sign Up </a> </button>
             </div>
             <div></div>
             
 
 
         </div>
+        <!-- 2nd part div................... -->
 
 
-        <div id="crauser">
-            <img src=" https://s.rmjo.in/Paytm%20CB%20Web%20Banner%20Desktop%20(1).png" alt="">
-          
-            <button><</button>
-            <button>></button>
-        </div>
+        <div id="cra" >
+          <img id="crauser" src="https://s.rmjo.in/Paytm%20CB%20Web%20Banner%20Desktop%20(1).png" alt="error">
+          <button id="left-btn"><</button>
+          <button id="right-btn">></button>
+         
+      </div>
+        <!-- 3rd part Dic.................... -->
 
         <div id="section">
             <div>
@@ -273,11 +67,11 @@
             </div>
             <div id="fur">
                 <img  src="https://cdn-icons-png.flaticon.com/512/3030/3030335.png" alt="">
-                <h3>Furniture</h3>
+                <a href="furniture.html"><h3>Furniture</h3>
             </div>
             <div id="appliance">
                 <img src="https://cdn-icons-png.flaticon.com/512/4237/4237160.png" alt="">
-                <a href=""><h3>Appliances</h3></a>
+                <a href="appliance.html"><h3>Appliances</h3></a>
             </div>
             <div id="electronics">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAAaVBMVEX39/cBod3//PkAmtv8+fgAnNwAntwAn9309fYpqN8dpN7u9fbF4vBdueSr1+2Ty+m12u6IyOg1reHW6fPl8PXZ6/PO5fFsveVVteN7w+f///qZzuqk0utEsOEurODn8fWx1uy63e/I4/Gc8/S2AAAE+UlEQVR4nO2d24KqOBBFITcEsb0iOmo79v9/5AjB1jMPQrWbpLvPXs9CZVUqlUQfTBJCCCGEkL8dY5QykzOG9mWxjR65Dqg61qtUg7DpqT5W38bRqPUy1S5LkTini/lGxXZLGr3yZB1U7lPS1vEV1fpksXP3p+LSxC1UsxxRr8Hmm4iGZnqyt5FkzrrifYUgT919SWduG83QnIvb4rNu9raeKhTT9XH3ubB1LENzTrs069UiUdDFct14poesU3RVJMPc+7m8HGXLMsm+WwDFCG/vR9U+wXY/WqNTFx/C1RF2C3Px6bVvIwY3a18k+iN8kZrCh16Mmlyz9WnMg0+hObaR7XzkyOrg41xCT6HyE7gaPbNqlcWYQlO2idXr0RNr1jpQpD/wLTTb9efV9Ozp/aFOzRS6fdgpNL6Dlr1pNfMif0Ix6x13166LoIKmausm7S8bNXt6lcqGjLtdhDroccYsmqxm/em/1vLz28aA5uFf4Y5BBZduYEyAoDm64ItQzbJhSxAiuG4X4SmoYNvZbDXgk7OXBZNzu4yDnrjVqQnpzgM+OdPuCXZQc/T96OVRCzD5UMGk+vcpQy6z/tRkJy8PezheMJsO+uxzBrzBC+rvKvg6FMRDQSgUxENBKPEEJz17HIh/YgmmlzII22iCNhBpLMGgUJCCcsEsENEEZ4GIJZglsJ90nxJtH/z9JxkKYqAgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgHgpCoSAeCkKhIB4KQqEgnr9F8Nf/ReZbGBbRBJ/9ETuSNJZgUChIQbngr1+D8zAcYglmE/W798Hff5KhIAYK4vm64LVniJ/5OYJGbcpLpaSKP0ZQfay0tbZ4U8LnYgm6s+ghddDdoauWGUYQVKsmpBUJmlLfjpV2LjL0gi6o4K75C3W7lqwmP8xuDmXF7R+SDfE1VN0cgO1CIGi29i7ojpLUnNvTdiFvv1/HHJqYbikRPLoHQckq9KnJTsLW9BLmo52OlWSYhwfBTCTYpsbtQwomUy3tMmbxWKKSuVezTFzVL6NO4qU01XdB/SF4cNJOva6CCnYFlwvKxjcmX6Hvkgp9a6e+CFqhSbLxNVpKZiK/GdqNpEL9oSLsErzthKIpNNOTvipmNpdUmzraCBXanEvauPYgSawq69OqXkguFGbTxgm7SbSoVTuFeivJrFFXRA9M/NdbsjAQPk8mkvUkDjJZOfHBAIXadz1jPVpwVRWZjxHou4P/0Z2e9UF8hR2EMfOuSLSkWQMHUHXxbX5RX/gm4vnL1eRYdCWijxEKtB3E5w3PFvNt0vQPCNcXbRYze9s1tahTQ1H3O6yz7r3eLyHsd6m12e3NVvoNBxKzTh/vCKgfW7L7O10xXg8bZDipHy4JcJzdJ1H6ywOqzG3WP9Sv6dVV1OnzGFXutHX94xWROZsuN+PsP2KMmi7q3ALR6e6w/SZ2nmtrT6rtZQHhsj0b+MYKALMJtsRWIYQQQsjP4D/+tJBikxJ7swAAAABJRU5ErkJggg==" alt="">
@@ -294,7 +88,193 @@
 
 
         </div>
+        <!-- 4rd part...div -->
+        <div id="youlove">
+          <h2>You'll love to take these home</h2>
+          <div id="gallery">
+            <div>
+              <img src="https://p.rmjo.in/productSquare/r0x962zi-500x500.jpg" alt="">
+              <h3 id="rent-name">Rowling Bookshelf Medium</h3>
+             <p>Monthly Rental:  ₹ 109</p>
+              <button>See more</button>
+            </div>
+            <div>
+              <img src="https://p.rmjo.in/productSquare/ezzd04ug-500x500.jpg" alt="">
+              <h3 id="rent-name">Felix 3-Seater Fabric Sofa (Blue)</h3>
+             <p>Monthly Rental:  ₹ 789 </p>
+              <button>See more</button>
+            </div>
+            <div>
+              <img src="https://p.rmjo.in/productSquare/niqfc8xs-500x500.jpg" alt="">
+              <h3>Caramel 4-Seater Wooden Coffee Table</h3>
+              <p>Monthly Rental:  ₹ 459</p>
+              <button>See more</button>
+            </div>
+            <div>
+              <img src="https://p.rmjo.in/productSquare/spquh9q1-500x500.jpg" alt="">
+              <h3>OnePlus 7 (Mirror Gray) Never Settle</h3>
+              <p>Monthly Rental:  ₹ 989</p>
+              <button>See more</button>
+              
+            </div>
+            <div>
+              <img src="https://p.rmjo.in/moodShot/py7cmjn3-1024x512.jpg" alt="">
+              <h3>Smart LED TV - 43 AMOLED Display</h3>
+              <p>Monthly Rental:  ₹ 989</p>
+              <button>See more</button>
+              
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5th part div section-2............... -->
+        <div id="last-section">
+          <h2>There's more to renting</h2>
+          <div id="more-rent">
+          
+            <div>
+              <img src="data:image/png;base64,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" alt="">
+              <h2>Finest-quality products</h2>
+              <p>Quality matters to you, and us! That's why we do a strict quality-check for every product.</p>
+            </div>
+            <div>
+              <img src=" https://cdn-icons-png.flaticon.com/512/2095/2095564.png" alt="">
+              <h2>Free Relocation</h2>
+              <p>Changing your house or even your city? We'll relocate your rented products for free.</p>
+            </div>
+            <div>
+              <img src="https://cdn1.vectorstock.com/i/1000x1000/53/55/maintenance-repair-service-tools-icon-blue-color-vector-37325355.jpg" alt="">
+              <h2>Free Maintenance</h2>
+              <p>Keeping your rented products in a spick and span condition is on us, so you can sit back and relax.</p>
+            </div>
+            <div>
+              <img src="https://thumbs.dreamstime.com/b/delete-cancel-close-cross-blue-dotted-line-icon-148919936.jpg" alt="">
+              <h2>Cancel Anytime</h2>
+              <p>Pay only for the time you use the product and close your subscription without any hassle.</p>
+            </div>
+            <div>
+              <img src="data:image/png;base64,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" alt="">
+              <h2>Easy Return On Delivery</h2>
+              <p>If you don't like the product on delivery, you can return it right away—no questions asked.</p>
+            </div>
+            <div>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqkyxAjzm7PUCT29LCI74FkW73YES7xj1Kqw&usqp=CAU" alt="">
+              <h2>Keep Upgrading</h2>
+              <p>Bored of the same product? Upgrade to try another, newer design and enjoy the change!</p>
+            </div>
+           
+  
+          </div>
+          <div id="know-more">
+            <a href="https://www.rentomojo.com/benefits"><h2 id="no-more">Know more</h2></a>
+            
+          </div>
+        </div>
+        <div id="text-section">
+          <h2>RentoMojo: Upgrade To Your Dream Lifestyle At An Unbelievably Low Price!</h2>
+          <p>RentoMojo is your ticket to a better lifestyle in India. We provide designer furniture, the newest gadgets, and bestselling appliances on rent in major Indian cities. You can use the best products available in the market at just a fraction of their retail value. You pay us a small monthly fee, which becomes lesser the longer you rent from us.
+
+            Besides saving you money, we do our best to provide you with an exceptional, super-comfortable rental experience. Our ordering process is straightforward and efficient. You can order from us in a matter of minutes from your PC or smartphone. We offer speedy delivery in major Indian cities, namely Bangalore, Mumbai, Delhi, Chennai, Pune, Hyderabad, Gurgaon, and Noida.
+            
+            No matter what product you rent from us, we will provide you with several complementary benefits with it. The benefits range from a yearly product swap option to a periodic free maintenance service. These are benefits no regular retailer offers. Start renting now!</p>
+           
+            <h2>5 Reasons Why Renting Beats Buying</h2>
+            <p>At RentoMojo, we put quality first. That’s why we source our products only from the most reputable, trusted manufacturers. You get to rent the most popular, best-selling products in the market.
+
+              Furniture on rent: RentoMojo offers furniture from premium, reputed brands. We have furniture for homes and offices. Alternatively, you can rent furniture for any room in your home, including your living room, dining room, study, kitchen, outdoor space, and nursery.
+              <br>
+              <br>
+              Appliances on rent: Appliances like smart TVs, inverter air conditioners, and front-loading washing machines make life easier. RentoMojo offers an all-inclusive selection of appliances from top brands like Samsung, Haier, and Voltas.
+              <br>
+              <br>
+
+              Electronics on rent: Is staying connected and living a smarter lifestyle in today’s digital era a priority for you? RentoMojo provides a wide selection of the latest, high-demand gadgets and home electronics, including smartphones, tablets, laptops, and smart home devices.
+              <br>
+              <br>
+              Fitness gear on rent: Don’t have time to hit the gym? Just rent fitness equipment for your home and exercise in your free time. We rent out treadmills, exercise bikes, cross trainers, and other fitness gear for strength and cardio training. Our gear comes with the very latest in fitness features.
+              <br>
+              <br>
+              Furniture & appliance packages on rent: It can be expensive to furnish an entire house or office. Our furniture and appliance packages contain a pre-selected grouping of items available at a higher than usual discount.</p>
+
+              <h2>Top-Rated, Branded Products–For Home, Office, And Personal Use</h2>
+              <p>Furniture on rent: RentoMojo offers furniture from premium, reputed brands. We have furniture for homes and offices. Alternatively, you can rent furniture for any room in your home, including your living room, dining room, study, kitchen, outdoor space, and nurseryAppliances on rent:
+                <br>
+                <br>
+                 Appliances like smart TVs, inverter air conditioners, and front-loading washing machines make life easier. RentoMojo offers an all-inclusive selection of appliances from top brands like Samsung, Haier, and Voltas.
+                 <br>
+                 <br>
+
+                Electronics on rent: Is staying connected and living a smarter lifestyle in today’s digital era a priority for you? RentoMojo provides a wide selection of the latest, high-demand gadgets and home electronics, including smartphones, tablets, laptops, and smart home devices.
+                <br>
+                <br>
+                Fitness gear on rent: Don’t have time to hit the gym? Just rent fitness equipment for your home and exercise in your free time. We rent out treadmills, exercise bikes, cross trainers, and other fitness gear for strength and cardio training. Our gear comes with the very latest in fitness features.
+                <br>
+                <br>
+                Furniture & appliance packages on rent: It can be expensive to furnish an entire house or office. Our furniture and appliance packages contain a pre-selected grouping of items available at a higher than usual discount.</p>
+                <h2>We Take Care Of You</h2>
+                <p>At RentoMojo, we are committed to providing you not just the best products but also excellent service.
+                  <br>
+                  <br>
+                   Our selection is geared towards a variety of budgets and needs. We offer something for everyone.
+
+                  Flexible plans: We offer plans with flexible rental terms. You can rent any item from us for a few months or a few years. The choice is yours.
+                  <br>
+                  <br>
+
+                  Damage waiver: If you accidentally damage your item, our damage waiver policy covers the cost of minor repairs.
+                  <br>
+                  <br>
+
+                  Opt-out early: You’re not tied to your rental term. If you change your mind about renting from us, you can opt-out of your contract early. You only have to pay until the current usage period.</p>
+
+        </div>
+        
         
     </div>
 </body>
+
+
+<script>
+  // CRAUSER>>>>>>>>>>>>>>>>
+ 
+    let imageLink=[
+        "https://s.rmjo.in/Paytm%20CB%20Web%20Banner%20Desktop%20(1).png",
+        " https://s.rmjo.in/PS-HP-Web.png",
+        "https://s.rmjo.in/Spotch_Web-HP.png",
+        
+        "https://s.rmjo.in/AC%20Offer%20Banner%20HP_.jpg",
+       
+       
+             ]
+
+    let leftbtn=document.getElementById("left-btn")    ;    
+    let rightbtn=document.getElementById("right-btn")    ;  
+
+    let crauser=document.getElementById("crauser")
+    
+    let imageState=0;
+   
+    rightbtn.addEventListener("click",function(){
+        imageState++
+        if(imageState==imageLink.length){
+        imageState=0;
+    }
+        crauser.src=imageLink[imageState]
+    })
+    
+    leftbtn.addEventListener("click",function(){
+        imageState--
+
+        if(imageState<0){
+            imageState=imageLink.length-1
+        }
+        crauser.src=imageLink[imageState]
+    })
+
+   
+
+    
+
+</script>
 </html>
