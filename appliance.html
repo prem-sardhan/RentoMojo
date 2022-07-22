@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+
+            display: grid;
+            width: 90%;
+    
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 350px);
+            gap: 20px;
+            margin: auto;
+
+        }
+
+        #container>div {
+            text-align: center;
+            border: 1px solid transparent;
+            line-height: 9px;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        }
+        h2{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        div img{
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+
+</html>
+
+
+<script>
+    var mensData = [
+        {
+            image_url:
+                "https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/washer-fa-small/lifestyle/external_thumb/1.png",
+            name: "Refrigerator 500L",
+            price: "1130/month",
+            strikedoffprice: "2599",
+        },
+        {
+            image_url:
+                "https://storage.googleapis.com/static_images/v3_product_images/sprint9/tmp/19-Oct-2021T09-23-1634635393__pUpload_tmp/prods/new_images/zunpure-ro-water-purifier/lifestyle/normal/1.png",
+            name: "Smart Wi-Fi Water Purifier ",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://storage.googleapis.com/static_images/v3_product_images/sprint5/new_images_sprint5/mw-solo/lifestyle/external_thumb/1.png",
+            name: "Solo Microwave Oven",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://www.rentomojo.com/public/images/category/appliances-bg/washing-machines.jpg",
+            name: "Wahing Mchine",
+            price: 399,
+            strikedoffprice: 799,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/ex9dpggj-500x500.jpg",
+            name: "cloth Dryer ",
+            price: 120,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/tj583ult-500x500.jpg",
+            name: " Inverter Air Conditioner 1 Ton ",
+            price: 1440,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/H7efglOe_tablet_Desktop_tablet__14_.jpg",
+            name: " Double Door Refrigerator ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/ex9dpggj-500x500.jpg",
+            name: "Front Load Washing Machine (Fully Automatic 6kg ) ",
+            price: 769,
+            strikedoffprice: 1099,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/IkUrnX4o_tablet_Recliner-with-Fridge-Desktop.jpg",
+            name: "Lounger with Refrigerator (181 -190 L) Combo  ",
+            price: 1299,
+            strikedoffprice: 1440,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/OY8ERFaA_tablet_Desktop_tablet__26_.jpg",
+            name: "Flex 3 Seater with Combo",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/ex9dpggj-500x500.jpg",
+            name: "Front Load Washing Machine (Fully Automatic 6kg ) ",
+            price: 769,
+            strikedoffprice: 1099,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/tj583ult-500x500.jpg",
+            name: " Inverter Air Conditioner 1 Ton ",
+            price: 1440,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/5e7/a15/40b/thumb_3590_760_577_0_0_crop.jpg ",
+            name: "Sonic Side Chair  ",
+            price: 599,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://media.istockphoto.com/photos/happy-young-woman-and-man-hugging-using-smartphone-together-picture-id1309085617?b=1&k=20&m=1309085617&s=170667a&w=0&h=WEuk5MlP_ofmqZ8o7mQ9TpjR0XYc4ft8c__JVmH165I= ",
+            name: "Premuium long reclinear",
+            price: 1575,
+            strikedoffprice: 3499,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/ex9dpggj-500x500.jpg ",
+            name: "Front Load Washing Machine (Fully Automatic 6kg ) ",
+            price: 769,
+            strikedoffprice: 1099,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1550226891-ef816aed4a98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "luxury premium sofa set ",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/tj583ult-500x500.jpg",
+            name: " Inverter Air Conditioner 1 Ton ",
+            price: 1440,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/ex9dpggj-500x500.jpg",
+            name: "Front Load Washing Machine (Fully Automatic 6kg ) ",
+            price: 769,
+            strikedoffprice: 1099,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/tj583ult-500x500.jpg",
+            name: " Inverter Air Conditioner 1 Ton ",
+            price: 1440,
+            strikedoffprice: 3199,
+        },
+        {   image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/kznNsFHT_tablet_2-Recliner-with-43-inch-TV-Desktop.jpg ",
+            name: " Twin Recliner with LED Smart TV 109.2cm ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/tj583ult-500x500.jpg",
+            name: " Inverter Air Conditioner 1 Ton ",
+            price: 1440,
+            strikedoffprice: 3199,
+        },
+        {  image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/602/e82/2e1/thumb_3863_760_577_0_0_crop.jpg ",
+            name: "Front Load Washing Machine (Fully Automatic 6kg ) ",
+            price: 769,
+            strikedoffprice: 1099,
+        },
+        {
+            image_url:
+                "https://p.rmjo.in/productSquare/tj583ult-500x500.jpg",
+            name: " Inverter Air Conditioner 1 Ton ",
+            price: 1440,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/OY8ERFaA_tablet_Desktop_tablet__26_.jpg",
+            name: "Flex 3 Seater with Combo",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/IkUrnX4o_tablet_Recliner-with-Fridge-Desktop.jpg",
+            name: "Lounger with Refrigerator (181 -190 L) Combo  ",
+            price: 1299,
+            strikedoffprice: 1440,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/kznNsFHT_tablet_2-Recliner-with-43-inch-TV-Desktop.jpg ",
+            name: " Twin Recliner with LED Smart TV 109.2cm ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Wooden Desk",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/kznNsFHT_tablet_2-Recliner-with-43-inch-TV-Desktop.jpg ",
+            name: " Twin Recliner with LED Smart TV 109.2cm ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/IkUrnX4o_tablet_Recliner-with-Fridge-Desktop.jpg",
+            name: "Lounger with Refrigerator (181 -190 L) Combo  ",
+            price: 1299,
+            strikedoffprice: 1440,
+        },
+        { image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/OY8ERFaA_tablet_Desktop_tablet__26_.jpg",
+            name: "Flex 3 Seater with Combo",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/IkUrnX4o_tablet_Recliner-with-Fridge-Desktop.jpg",
+            name: "Lounger with Refrigerator (181 -190 L) Combo  ",
+            price: 1299,
+            strikedoffprice: 1440,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/kznNsFHT_tablet_2-Recliner-with-43-inch-TV-Desktop.jpg ",
+            name: " Twin Recliner with LED Smart TV 109.2cm ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/OY8ERFaA_tablet_Desktop_tablet__26_.jpg",
+            name: "Flex 3 Seater with Combo",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/kznNsFHT_tablet_2-Recliner-with-43-inch-TV-Desktop.jpg ",
+            name: " Twin Recliner with LED Smart TV 109.2cm ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/OY8ERFaA_tablet_Desktop_tablet__26_.jpg",
+            name: "Flex 3 Seater with Combo",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/kznNsFHT_tablet_2-Recliner-with-43-inch-TV-Desktop.jpg ",
+            name: " Twin Recliner with LED Smart TV 109.2cm ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+    ];
+
+    mensData.forEach(function (elem) {
+
+        //  console.log(elem.image_url);
+
+        let box = document.createElement("div")
+       
+
+        let image = document.createElement("img")
+        image.setAttribute("src", elem.image_url)
+
+        let Mname = document.createElement("h2")
+        Mname.innerText = elem.name
+
+        //   image.setAttribute("src", elem.h2)
+        let prc = document.createElement("p")
+        prc.innerText = elem.price
+
+
+        let btn = document.createElement("button")
+
+         btn.innerText = "Add to cart"
+
+
+        box.append(image,Mname,prc,btn)
+        
+        document.querySelector("#container").append(box)
+
+
+    })
+
+</script>

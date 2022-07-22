@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+
+            display: grid;
+            width: 90%;
+    
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 350px);
+            gap: 20px;
+            margin: auto;
+
+        }
+
+        #container>div {
+            text-align: center;
+            border: 1px solid transparent;
+            line-height: 9px;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        }
+        h2{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        div img{
+            width: 100%;
+            height: 50%;
+        }
+
+        /* upper data............... */
+        #navbar{
+    width: 100%;
+    height: 65px;
+    position: webkit-sticky;
+      position: sticky; 
+      top: 0;
+    
+    
+    margin-top: 5px;
+    display: flex;
+   
+    background-color: rgb(246,246,246);
+    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    
+    
+    
+    
+    
+}
+#navbar div{
+    /* width: 25%; */
+    height: 100%;
+   
+    margin: auto;
+
+}
+#navbar>div:nth-child(1){
+    width: 15%;
+    margin-left: 7%;
+}
+#navbar img{
+width: 100%;
+height: 80%;
+}
+#logo img{
+width: 15%;
+height: 50%;
+margin-left: 35px;
+}
+#navbar div:nth-child(3){
+width: 45%;
+margin-left: 35px;
+border-radius: 35px;
+}
+#searchbox input{
+width: 100%;
+height: 80%;
+font-size: large;
+background-color: rgb(227, 230, 236);
+border-radius: 15px;
+
+}
+#navbar div:nth-child(4){
+width: 6%;
+height: 80%;
+margin-left: 10px;
+
+}
+#cart1 img{
+width: 70%;
+height: 70%;
+
+
+
+}
+#navbar div:nth-child(5){
+width: 8%;
+height: 100%;
+}
+#btn button{
+
+padding: 8px;
+border-radius: 5px;
+background-color: #dc3226;
+color: white;
+border: none;
+margin-left: 5px;
+margin-top: 15px
+
+
+}
+#btn button a{
+color: whitesmoke;
+}
+#btn button:hover{
+cursor: pointer;
+background-color: white;
+}
+#btn a{
+text-decoration: none;
+}
+    </style>
+</head>
+<div id="navbar">
+    <div>
+        <img src="https://www.nicepng.com/png/detail/256-2564838_horizontal-dot-com-rentomojo-logo.png" alt="">
+    </div>
+   
+    
+    <div>
+        <select id="location">
+            <option value="">Select Location</option>
+            <option value="Low">Bangalore</option>
+            <option value="Medium">Mumbai</option>
+            <option value="High">Delhi</option>
+            <option value="High">phulera</option>
+          </select>
+          <div id="logo">
+            <img src="https://www.seekpng.com/png/detail/11-110316_icons-logos-emojis-orange-location-icon-png.png" alt="">
+          </div>
+        
+    </div>
+    <div id="searchbox">
+        <input type="text" placeholder="     Search for product      ">
+    </div>
+    <div id="cart1">
+        <a href="cart.html">  <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559831.jpg" alt=""> </a>
+      
+       
+    </div>
+    <div id="btn">
+      <button> <a id="sign in" href="signup.html">Login/Sign Up </a> </button>
+    </div>
+    <div></div>
+    
+
+
+</div>
+<body>
+    <div id="container"></div>
+</body>
+
+</html>
+
+
+<script>
+    var mensData = [
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Premium curology",
+            price: "1130/month",
+            strikedoffprice: "2599",
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1550226891-ef816aed4a98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "luxury premium sofa set ",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Wooden Desk",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Preimum 3 seater sofa set",
+            price: 399,
+            strikedoffprice: 799,
+        },
+        {
+            image_url:
+                "https://media.istockphoto.com/photos/luxury-furniture-goods-picture-id1350859272?b=1&k=20&m=1350859272&s=170667a&w=0&h=wZ3TXnV30t0-vPXPJSfft8oqmsiO0rKC0EWo795Vw0c=",
+            name: "Italian interior ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/625/846/f7d/thumb_4259_320_220_0_0_crop.jpg ",
+            name: " CUSTOM PARSONS TABLE ",
+            price: 1440,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/57e/cbe/c85/thumb_178_760_577_0_0_crop.jpg ",
+            name: " Laminate Conference Options ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/602/e82/2e1/thumb_3863_760_577_0_0_crop.jpg ",
+            name: "Work From Home L- Shape  ",
+            price: 769,
+            strikedoffprice: 1099,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/623/335/c55/thumb_4214_760_577_0_0_crop.jpg",
+            name: "Darran Executive Desk  ",
+            price: 1299,
+            strikedoffprice: 1440,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/62d/6bc/0c5/thumb_4461_760_577_0_0_crop.jpg",
+            name: "Executive Office",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/5f1/06e/a91/thumb_3713_760_577_0_0_crop.jpg ",
+            name: "Live Edge Conference  ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/57e/cbe/c85/thumb_179_760_577_0_0_crop.jpg ",
+            name: "Bungee Conference Table  ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/5e7/a15/40b/thumb_3590_760_577_0_0_crop.jpg ",
+            name: "Sonic Side Chair  ",
+            price: 599,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://media.istockphoto.com/photos/happy-young-woman-and-man-hugging-using-smartphone-together-picture-id1309085617?b=1&k=20&m=1309085617&s=170667a&w=0&h=WEuk5MlP_ofmqZ8o7mQ9TpjR0XYc4ft8c__JVmH165I= ",
+            name: "Premuium long reclinear",
+            price: 1575,
+            strikedoffprice: 3499,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Premium curology",
+            price: "1130/month",
+            strikedoffprice: "2599",
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1550226891-ef816aed4a98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "luxury premium sofa set ",
+            price: 699,
+            strikedoffprice: 999,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Wooden Desk",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/5f1/06e/a91/thumb_3713_760_577_0_0_crop.jpg ",
+            name: "Live Edge Conference  ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://media.istockphoto.com/photos/luxury-furniture-goods-picture-id1350859272?b=1&k=20&m=1350859272&s=170667a&w=0&h=wZ3TXnV30t0-vPXPJSfft8oqmsiO0rKC0EWo795Vw0c=",
+            name: "Italian interior ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {  image_url:
+                "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Wooden Desk",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/5f1/06e/a91/thumb_3713_760_577_0_0_crop.jpg ",
+            name: "Live Edge Conference  ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        { image_url:
+                "https://media.istockphoto.com/photos/luxury-furniture-goods-picture-id1350859272?b=1&k=20&m=1350859272&s=170667a&w=0&h=wZ3TXnV30t0-vPXPJSfft8oqmsiO0rKC0EWo795Vw0c=",
+            name: "Italian interior ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/5f1/06e/a91/thumb_3713_760_577_0_0_crop.jpg ",
+            name: "Live Edge Conference  ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Premium curology",
+            price: "1130/month",
+            strikedoffprice: "2599",
+        },
+        {
+            image_url:
+                "https://media.istockphoto.com/photos/luxury-furniture-goods-picture-id1350859272?b=1&k=20&m=1350859272&s=170667a&w=0&h=wZ3TXnV30t0-vPXPJSfft8oqmsiO0rKC0EWo795Vw0c=",
+            name: "Italian interior ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/57e/cbe/c85/thumb_178_760_577_0_0_crop.jpg ",
+            name: " Laminate Conference Options ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Wooden Desk",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/5f1/06e/a91/thumb_3713_760_577_0_0_crop.jpg ",
+            name: "Live Edge Conference  ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Premium curology",
+            price: "1130/month",
+            strikedoffprice: "2599",
+        },
+        { image_url:
+                "https://media.istockphoto.com/photos/luxury-furniture-goods-picture-id1350859272?b=1&k=20&m=1350859272&s=170667a&w=0&h=wZ3TXnV30t0-vPXPJSfft8oqmsiO0rKC0EWo795Vw0c=",
+            name: "Italian interior ",
+            price: 1620,
+            strikedoffprice: 3599,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Wooden Desk",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/57e/cbe/c85/thumb_178_760_577_0_0_crop.jpg ",
+            name: " Laminate Conference Options ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Premium curology",
+            price: "1130/month",
+            strikedoffprice: "2599",
+        },
+        {
+            image_url:
+                "https://boomerangofficefurniture.com/storage/app/uploads/public/57e/cbe/c85/thumb_178_760_577_0_0_crop.jpg ",
+            name: " Laminate Conference Options ",
+            price: 1999,
+            strikedoffprice: 3199,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Wooden Desk",
+            price: 945,
+            strikedoffprice: 2099,
+        },
+        {
+            image_url:
+                "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            name: "Premium curology",
+            price: "1130/month",
+            strikedoffprice: "2599",
+        },
+    ];
+
+    mensData.forEach(function (elem) {
+
+        //  console.log(elem.image_url);
+
+        let box = document.createElement("div")
+       
+
+        let image = document.createElement("img")
+        image.setAttribute("src", elem.image_url)
+
+        let Mname = document.createElement("h2")
+        Mname.innerText = elem.name
+
+        //   image.setAttribute("src", elem.h2)
+        let prc = document.createElement("p")
+        prc.innerText = elem.price
+
+
+        let btn = document.createElement("button")
+
+         btn.innerText = "Add to cart"
+
+
+        box.append(image,Mname,prc,btn)
+        
+        document.querySelector("#container").append(box)
+
+
+    })
+
+</script>

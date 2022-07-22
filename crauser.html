@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crauser</title>
+    <style>
+        div{
+            width: 100vw;
+            position: relative;
+        }
+        img{
+            width: 100%;
+           
+        }
+        button{
+            position: absolute;
+            top: 40%;
+            background-color: rgba(100, 100,100, 0.3);
+            border: none;
+            font-size: 1.5rem;
+            color: rgb(126, 23, 23);
+        }
+        button:nth-child(2){
+            left: 10px;
+        }
+        button:nth-child(3){
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <img id="crauser" src="https://s.rmjo.in/Paytm%20CB%20Web%20Banner%20Desktop%20(1).png" alt="error">
+        <button id="left-btn"><</button>
+        <button id="right-btn">></button>
+       
+    </div>
+</body>
+<script>
+    let imageLink=[
+        "https://s.rmjo.in/Paytm%20CB%20Web%20Banner%20Desktop%20(1).png",
+        " https://s.rmjo.in/PS-HP-Web.png",
+        "https://s.rmjo.in/Spotch_Web-HP.png",
+        
+        "https://s.rmjo.in/AC%20Offer%20Banner%20HP_.jpg",
+       
+       
+             ]
+
+    let leftbtn=document.getElementById("left-btn")    ;    
+    let rightbtn=document.getElementById("right-btn")    ;  
+
+    let crauser=document.getElementById("crauser")
+    
+    let imageState=0;
+   
+    rightbtn.addEventListener("click",function(){
+        imageState++
+        if(imageState==imageLink.length){
+        imageState=0;
+    }
+        crauser.src=imageLink[imageState]
+    })
+    
+    leftbtn.addEventListener("click",function(){
+        imageState--
+
+        if(imageState<0){
+            imageState=imageLink.length-1
+        }
+        crauser.src=imageLink[imageState]
+    })
+
+   
+
+    
+</script>
+</html>
