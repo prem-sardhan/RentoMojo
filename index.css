@@ -106,6 +106,8 @@ width: 95%;
 height: 500px;
 margin: auto;
 margin-bottom: 20px;
+
+
 /* position: relative; */
 
 margin-top: 70px;
@@ -113,6 +115,7 @@ margin-top: 70px;
 #crauser img{
 width: 100%;
 height: 100%;
+
 
 }
 #crauser button{

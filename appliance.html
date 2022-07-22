@@ -11,7 +11,7 @@
 
             display: grid;
             width: 90%;
-    
+
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(5, 350px);
             gap: 20px;
@@ -27,18 +27,162 @@
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         }
-        h2{
+
+        h2 {
             font-size: 14px;
             line-height: 18px;
         }
-        div img{
+
+        div img {
             width: 100%;
             height: 50%;
+        }
+
+        /* nav bar css.............. */
+        #navbar {
+            width: 100%;
+            height: 65px;
+            position: webkit-sticky;
+            position: sticky;
+            top: 0;
+
+
+            margin-top: 5px;
+            display: flex;
+
+            background-color: rgb(246, 246, 246);
+
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+
+
+
+
+        }
+
+        #navbar div {
+            /* width: 25%; */
+            height: 100%;
+
+            margin: auto;
+
+        }
+
+        #navbar>div:nth-child(1) {
+            width: 15%;
+            margin-left: 7%;
+        }
+
+        #navbar img {
+            width: 100%;
+            height: 80%;
+        }
+
+        #logo img {
+            width: 15%;
+            height: 50%;
+            margin-left: 35px;
+        }
+
+        #navbar div:nth-child(3) {
+            width: 45%;
+            margin-left: 35px;
+            border-radius: 35px;
+        }
+
+        #searchbox input {
+            width: 100%;
+            height: 80%;
+            font-size: large;
+            background-color: rgb(227, 230, 236);
+            border-radius: 15px;
+
+        }
+
+        #navbar div:nth-child(4) {
+            width: 6%;
+            height: 80%;
+            margin-left: 10px;
+
+        }
+
+        #cart1 img {
+            width: 70%;
+            height: 70%;
+
+
+
+        }
+
+        #navbar div:nth-child(5) {
+            width: 8%;
+            height: 100%;
+        }
+
+        #btn button {
+
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #dc3226;
+            color: white;
+            border: none;
+            margin-left: 5px;
+            margin-top: 15px
+        }
+
+        #btn button a {
+            color: whitesmoke;
+        }
+
+        #btn button:hover {
+            cursor: pointer;
+            background-color: white;
+        }
+
+        #btn a {
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
+    <div id="navbar">
+        <div>
+            <img src="https://www.nicepng.com/png/detail/256-2564838_horizontal-dot-com-rentomojo-logo.png" alt="">
+        </div>
+
+
+        <div>
+            <select id="location">
+                <option value="">Select Location</option>
+                <option value="Low">Bangalore</option>
+                <option value="Medium">Mumbai</option>
+                <option value="High">Delhi</option>
+                <option value="High">phulera</option>
+            </select>
+            <div id="logo">
+                <img src="https://www.seekpng.com/png/detail/11-110316_icons-logos-emojis-orange-location-icon-png.png"
+                    alt="">
+            </div>
+
+        </div>
+        <div id="searchbox">
+            <input type="text" placeholder="     Search for product      ">
+        </div>
+        <div id="cart1">
+            <a href="cart.html"> <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559831.jpg" alt="">
+            </a>
+
+
+        </div>
+        <div id="btn">
+            <button> <a id="sign in" href="signup.html">Login/Sign Up </a> </button>
+        </div>
+        <div></div>
+
+
+
+    </div>
     <div id="container"></div>
 </body>
 
@@ -46,6 +190,7 @@
 
 
 <script>
+    let cartLS=JSON.parse(localStorage.getItem("cartdata"))|| []
     var mensData = [
         {
             image_url:
@@ -180,7 +325,8 @@
             price: 1440,
             strikedoffprice: 3199,
         },
-        {   image_url:
+        {
+            image_url:
                 "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/kznNsFHT_tablet_2-Recliner-with-43-inch-TV-Desktop.jpg ",
             name: " Twin Recliner with LED Smart TV 109.2cm ",
             price: 1999,
@@ -193,7 +339,8 @@
             price: 1440,
             strikedoffprice: 3199,
         },
-        {  image_url:
+        {
+            image_url:
                 "https://boomerangofficefurniture.com/storage/app/uploads/public/602/e82/2e1/thumb_3863_760_577_0_0_crop.jpg ",
             name: "Front Load Washing Machine (Fully Automatic 6kg ) ",
             price: 769,
@@ -248,7 +395,8 @@
             price: 1299,
             strikedoffprice: 1440,
         },
-        { image_url:
+        {
+            image_url:
                 "https://assets.furlenco.com/image/upload/dpr_1.0,f_auto,q_auto/v1/furlenco-images/OY8ERFaA_tablet_Desktop_tablet__26_.jpg",
             name: "Flex 3 Seater with Combo",
             price: 699,
@@ -297,13 +445,12 @@
             strikedoffprice: 3199,
         },
     ];
-
     mensData.forEach(function (elem) {
 
         //  console.log(elem.image_url);
 
         let box = document.createElement("div")
-       
+
 
         let image = document.createElement("img")
         image.setAttribute("src", elem.image_url)
@@ -318,14 +465,24 @@
 
         let btn = document.createElement("button")
 
-         btn.innerText = "Add to cart"
+        btn.innerText = "Add to cart"
+
+        btn.addEventListener("click", function () {
+            hitmemore(elem)
+        })
 
 
-        box.append(image,Mname,prc,btn)
-        
+        box.append(image, Mname, prc, btn)
+
         document.querySelector("#container").append(box)
 
 
     })
+    function hitmemore(elem) {
+        cartLS.push(elem);
+        localStorage.setItem("cartdata", JSON.stringify(cartLS))
+        alert("item added")
+    }
+
 
 </script>
