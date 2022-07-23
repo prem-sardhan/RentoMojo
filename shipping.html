@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(237,233,233)
+        }
+
+        #Humhaidon {
+            width: 10%;
+            height: 600px;
+            background-color: rgb(228, 220, 214);
+
+        }
+
+
+        #totalpage {
+            border: 1px solid gray;
+            height: 750px;
+            width: 500px;
+            margin-right: 20px;
+            margin: auto;
+            background-color: rgb(158,158,158);
+            border-radius: 15px;
+            margin-top: 50px;
+            margin-left: 300px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+        }
+
+        #totalpage>h2 {
+            text-align: center;
+
+        }
+
+        .line {
+            background-color: black;
+            border: 1px solid black;
+        }
+
+        #totalpage>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #coupon {
+            width: 80%;
+            height: 40px;
+            margin-left: 30px;
+
+        }
+
+        #submit {
+            margin-top: 10px;
+            color: black;
+            
+            width: 63%;
+
+            height: 40px;
+            margin-left: 80px;
+        }
+        #submit:hover{
+            border: 1px solid rgb(5, 2, 41);
+            cursor: pointer;
+            background-color: rgb(158,158,158)
+
+        }
+
+        .adress+button {
+            width: 80%;
+            height: 40px;
+            margin-left: 50px;
+            border-radius: 10px;
+           
+
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: black
+            
+            
+           
+        }
+        .adress+button>a{
+            text-decoration: none;
+        }
+        .adress+button:hover{
+            cursor: pointer;
+            background-color: rgb(250,66,66);
+        }
+
+        .adress>input {
+            display: flex;
+            margin: 6px;
+            height: 40px;
+            margin-left: 7px;
+            margin-right: 15px;
+            width: 50%;
+            border-radius: 12px;
+        }
+
+        .shiped {
+            height: 40px;
+
+            width: 90%;
+            margin: 6px;
+            border-radius: 10px;
+            background-color: rgb(237,233,233);
+
+        }
+
+        .remove {
+            background-color: red;
+            color: white;
+            height: 30px;
+            width: 80px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #submit+h4 {
+            text-align: center;
+            font-style: italic;
+        }
+
+        .find {
+            height: 200px;
+            width: 200px;
+        }
+
+        #bean {
+            margin: 7px;
+            height: auto;
+            text-align: center;
+            background-color: pink;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            height: 400px;
+           
+        }
+
+        h3 {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 25px;
+            color: black;
+        }
+        #img{
+            width: 35%;
+            height: 550px;
+            border-radius: 20px;
+           
+            margin: auto;
+            margin-left: 70px
+            
+        }
+        #wholebox{
+            display: flex;
+        }
+        #img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        #img h2{
+            font-weight: lighter;
+            /* color: rgb(158,158,158); */
+            color:rgb(86,70,44);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #img h3{
+            font-size: 22px;
+            color: red;
+        }
+        #img{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        #totalpage{
+            margin-right: 60px;
+        }
+        #coupon{
+            border-radius: 12px;
+            background-color: rgb(237,233,233);
+        }
+        #pro{
+            font-size: 22px;
+        }
+        #price{
+            font-size: 22px;
+
+        }
+  
+    </style>
+</head>
+
+<body>
+    <!-- <h3><a href="payment.html">Go To Payment Page ></a></h3> -->
+
+    <div id="wholebox">
+        <div id="img">
+            <h2>Make your happiness a priority....  </h2>
+            <h3>Rent the latest trend with Rentomojo</h3>
+            <img src="https://thumbs.dreamstime.com/b/woman-choosing-living-room-lamp-smiling-shopper-furniture-shop-shopping-house-decor-elements-cartoon-character-looking-90482025.jpg" alt="">
+            
+           
+
+        </div>
+
+        <div id="totalpage">
+            <h2>Order Summary</h2>
+            <div class="line"><span></span></div>
+            <div id="pro">
+                <h4>No.of products</h4>
+                <h4 id="Nummber"></h4>
+            </div>
+            <div id="price">
+                <h4>Total price</h4>
+                <h4 id="Total"></h4>
+            </div>
+            <form>
+                <input type="text" placeholder="Enter Coupon Code" id="coupon">
+                <input type="submit" id="submit" value="Apply Coupon">
+                <h4>get 30% off- use MASAI30</h4>
+            </form>
+            <h2>
+                Shipping Details
+            </h2>
+            <div class="line"></div>
+            <input type="text" placeholder="Name" class="shiped">
+            <input type="email" placeholder="Email" class="shiped">
+            <input type="number" placeholder="Mobile" class="shiped">
+            <div class="adress">
+                <input type="text" placeholder="Street">
+                <input type="text" placeholder="City">
+
+            </div>
+            <div class="adress">
+                <input type="text" placeholder="State">
+                <input type="number" placeholder="Pincode">
+            </div>
+            <button><a href="Payment.html">Proceed to Payment</a></button>
+
+        </div>
+    </div>
+
+</body>
+<script>
+
+    var datafromCart = JSON.parse(localStorage.getItem("cartdata"))
+    //   console.log(datafromprod)
+    var total = datafromCart.reduce(function (sum, elem, index, arr) {
+        return sum + Number(elem.price)
+    }, 0)
+    var free = document.querySelector("#coupon").value;
+    var length = datafromCart.length;
+
+    document.querySelector("#submit").addEventListener("click", myfunction)
+
+    function myfunction(event) {
+        event.preventDefault()
+        if (free = "Masai@30") {
+            total = (total * 70 / 100)
+            document.querySelector("#Total").innerText = total;
+        }
+    }
+
+    document.querySelector("#Nummber").innerText = length;
+    document.querySelector("#Total").innerText = total;
+
+
+    datafromprod.map(function (elem) {
+        var LOL = document.createElement("div")
+        LOL.setAttribute("id", "bean")
+
+        var pic = document.createElement("img")
+        pic.src = elem.image_url
+        pic.setAttribute("class", "find")
+
+        var Name = document.createElement("p")
+        Name.innerText = elem.name;
+
+        var COmp = document.createElement("p")
+        COmp.innerText = elem.company
+        COmp.style.marginTop = "-10px"
+
+        var daam = document.createElement("h4")
+        daam.innerText = elem.price
+        daam.style.marginTop = "-10px"
+
+        var flop = document.createElement("button")
+        flop.innerText = "Remove"
+        flop.setAttribute("class", "remove")
+        flop.addEventListener("click", function () {
+            callme(elem)
+        })
+
+        LOL.append(pic, Name, COmp, daam, flop)
+        document.querySelector("#Humhaidon").append(LOL)
+
+    })
+    function callme(elem, index) {
+        datafromprod.splice(index, 1)
+        localStorage.setItem("cart", JSON.stringify(datafromprod))
+        window.location.reload()
+
+    }
+
+</script>
+
+</html>

@@ -11,7 +11,7 @@
 
             display: grid;
             width: 90%;
-    
+
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(5, 350px);
             gap: 20px;
@@ -27,116 +27,129 @@
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         }
-        h2{
+
+        h2 {
             font-size: 14px;
             line-height: 18px;
         }
-        div img{
+
+        div img {
             width: 100%;
             height: 50%;
         }
 
         /* upper data............... */
-        #navbar{
-    width: 100%;
-    height: 65px;
-    position: webkit-sticky;
-      position: sticky; 
-      top: 0;
-    
-    
-    margin-top: 5px;
-    display: flex;
-   
-    background-color: rgb(246,246,246);
-    
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    
-    
-    
-    
-    
-}
-#navbar div{
-    /* width: 25%; */
-    height: 100%;
-   
-    margin: auto;
+        #navbar {
+            width: 100%;
+            height: 65px;
+            position: webkit-sticky;
+            position: sticky;
+            top: 0;
 
-}
-#navbar>div:nth-child(1){
-    width: 15%;
-    margin-left: 7%;
-}
-#navbar img{
-width: 100%;
-height: 80%;
-}
-#logo img{
-width: 15%;
-height: 50%;
-margin-left: 35px;
-}
-#navbar div:nth-child(3){
-width: 45%;
-margin-left: 35px;
-border-radius: 35px;
-}
-#searchbox input{
-width: 100%;
-height: 80%;
-font-size: large;
-background-color: rgb(227, 230, 236);
-border-radius: 15px;
 
-}
-#navbar div:nth-child(4){
-width: 6%;
-height: 80%;
-margin-left: 10px;
+            margin-top: 5px;
+            display: flex;
 
-}
-#cart1 img{
-width: 70%;
-height: 70%;
+            background-color: rgb(246, 246, 246);
+
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
 
 
-}
-#navbar div:nth-child(5){
-width: 8%;
-height: 100%;
-}
-#btn button{
-
-padding: 8px;
-border-radius: 5px;
-background-color: #dc3226;
-color: white;
-border: none;
-margin-left: 5px;
-margin-top: 15px
 
 
-}
-#btn button a{
-color: whitesmoke;
-}
-#btn button:hover{
-cursor: pointer;
-background-color: white;
-}
-#btn a{
-text-decoration: none;
-}
+        }
+
+        #navbar div {
+            /* width: 25%; */
+            height: 100%;
+
+            margin: auto;
+
+        }
+
+        #navbar>div:nth-child(1) {
+            width: 15%;
+            margin-left: 7%;
+        }
+
+        #navbar img {
+            width: 100%;
+            height: 80%;
+        }
+
+        #logo img {
+            width: 15%;
+            height: 50%;
+            margin-left: 35px;
+        }
+
+        #navbar div:nth-child(3) {
+            width: 45%;
+            margin-left: 35px;
+            border-radius: 35px;
+        }
+
+        #searchbox input {
+            width: 100%;
+            height: 80%;
+            font-size: large;
+            background-color: rgb(227, 230, 236);
+            border-radius: 15px;
+
+        }
+
+        #navbar div:nth-child(4) {
+            width: 6%;
+            height: 80%;
+            margin-left: 10px;
+
+        }
+
+        #cart1 img {
+            width: 70%;
+            height: 70%;
+
+
+
+        }
+
+        #navbar div:nth-child(5) {
+            width: 8%;
+            height: 100%;
+        }
+
+        #btn button {
+
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #dc3226;
+            color: white;
+            border: none;
+            margin-left: 5px;
+            margin-top: 15px
+        }
+
+        #btn button a {
+            color: whitesmoke;
+        }
+
+        #btn button:hover {
+            cursor: pointer;
+            background-color: white;
+        }
+
+        #btn a {
+            text-decoration: none;
+        }
     </style>
 </head>
 <div id="navbar">
     <div>
         <img src="https://www.nicepng.com/png/detail/256-2564838_horizontal-dot-com-rentomojo-logo.png" alt="">
     </div>
-   
-    
+
+
     <div>
         <select id="location">
             <option value="">Select Location</option>
@@ -144,28 +157,30 @@ text-decoration: none;
             <option value="Medium">Mumbai</option>
             <option value="High">Delhi</option>
             <option value="High">phulera</option>
-          </select>
-          <div id="logo">
-            <img src="https://www.seekpng.com/png/detail/11-110316_icons-logos-emojis-orange-location-icon-png.png" alt="">
-          </div>
-        
+        </select>
+        <div id="logo">
+            <img src="https://www.seekpng.com/png/detail/11-110316_icons-logos-emojis-orange-location-icon-png.png"
+                alt="">
+        </div>
+
     </div>
     <div id="searchbox">
         <input type="text" placeholder="     Search for product      ">
     </div>
     <div id="cart1">
-        <a href="cart.html">  <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559831.jpg" alt=""> </a>
-      
-       
+        <a href="cart.html"> <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559831.jpg" alt=""> </a>
+
+
     </div>
     <div id="btn">
-      <button> <a id="sign in" href="signup.html">Login/Sign Up </a> </button>
+        <button> <a id="sign in" href="signup.html">Login/Sign Up </a> </button>
     </div>
     <div></div>
-    
+
 
 
 </div>
+
 <body>
     <div id="container"></div>
 </body>
@@ -174,6 +189,7 @@ text-decoration: none;
 
 
 <script>
+    let cartLS=JSON.parse(localStorage.getItem("cartdata"))|| []
     var mensData = [
         {
             image_url:
@@ -308,7 +324,8 @@ text-decoration: none;
             price: 1620,
             strikedoffprice: 3599,
         },
-        {  image_url:
+        {
+            image_url:
                 "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZ1cm5pdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
             name: "Wooden Desk",
             price: 945,
@@ -321,7 +338,8 @@ text-decoration: none;
             price: 1620,
             strikedoffprice: 3599,
         },
-        { image_url:
+        {
+            image_url:
                 "https://media.istockphoto.com/photos/luxury-furniture-goods-picture-id1350859272?b=1&k=20&m=1350859272&s=170667a&w=0&h=wZ3TXnV30t0-vPXPJSfft8oqmsiO0rKC0EWo795Vw0c=",
             name: "Italian interior ",
             price: 1620,
@@ -376,7 +394,8 @@ text-decoration: none;
             price: "1130/month",
             strikedoffprice: "2599",
         },
-        { image_url:
+        {
+            image_url:
                 "https://media.istockphoto.com/photos/luxury-furniture-goods-picture-id1350859272?b=1&k=20&m=1350859272&s=170667a&w=0&h=wZ3TXnV30t0-vPXPJSfft8oqmsiO0rKC0EWo795Vw0c=",
             name: "Italian interior ",
             price: 1620,
@@ -431,7 +450,7 @@ text-decoration: none;
         //  console.log(elem.image_url);
 
         let box = document.createElement("div")
-       
+
 
         let image = document.createElement("img")
         image.setAttribute("src", elem.image_url)
@@ -446,14 +465,23 @@ text-decoration: none;
 
         let btn = document.createElement("button")
 
-         btn.innerText = "Add to cart"
+        btn.innerText = "Add to cart"
+
+        btn.addEventListener("click",function(){
+            hitme(elem)
+        })
 
 
-        box.append(image,Mname,prc,btn)
-        
+        box.append(image, Mname, prc, btn)
+
         document.querySelector("#container").append(box)
 
 
     })
+    function hitme(elem){
+        cartLS.push(elem);
+        localStorage.setItem("cartdata",JSON.stringify(cartLS))
+        alert("item added")
+    }
 
 </script>

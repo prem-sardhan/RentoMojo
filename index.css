@@ -1,14 +1,14 @@
 #container{
     padding: 0px;
    
-    height: 4000px;
+    height: auto;
     background-color: rgb(246,246,246);
     
    
 }
 #navbar{
-    width: 100%;
-    height: 65px;
+    width: 95%;
+    height: 75px;
     position: webkit-sticky;
       position: sticky; 
       top: 0;
@@ -42,7 +42,7 @@ width: 100%;
 height: 80%;
 }
 #logo img{
-width: 15%;
+width: 35%;
 height: 50%;
 margin-left: 35px;
 }
@@ -66,8 +66,8 @@ margin-left: 10px;
 
 }
 #cart1 img{
-width: 70%;
-height: 70%;
+width: 80%;
+height: 80%;
 
 
 
@@ -78,7 +78,7 @@ height: 100%;
 }
 #btn button{
 
-padding: 8px;
+padding: 15px;
 border-radius: 5px;
 background-color: #dc3226;
 color: white;
@@ -89,7 +89,7 @@ margin-top: 15px
 
 }
 #btn button a{
-color: whitesmoke;
+color:black;
 }
 #btn button:hover{
 cursor: pointer;
@@ -102,10 +102,13 @@ text-decoration: none;
 
 /* CRAUSER...................... */
 #crauser{
-width: 95%;
-height: 500px;
+width: 80%;
+height: 600px;
 margin: auto;
 margin-bottom: 20px;
+border-radius: 30px;
+
+
 /* position: relative; */
 
 margin-top: 70px;
@@ -113,6 +116,7 @@ margin-top: 70px;
 #crauser img{
 width: 100%;
 height: 100%;
+
 
 }
 #crauser button{
@@ -141,6 +145,7 @@ height: 100%;
 margin: auto;
 border: 1px solid grey;
 border-radius: 7px;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 
 
@@ -390,4 +395,18 @@ text-align: center;
   font-size: 13px;
   text-align: left;
   line-height: 20px;
+}
+#gallery{
+  margin-top: 50px;
+}
+#section h3{
+  font-size: 19px;
+}
+#fur a{
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+}
+#location {
+  padding: 7px;
 }
